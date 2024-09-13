@@ -13,4 +13,16 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//middleware untuk membatasi user
+Route::group([
+    'middleware' => ['auth'],
+    'prefix' => 'admin', //admin/tamu
+    'as' => 'admin.', // routea(admin.)
+], function () {
+
+    //guestbook.test/admin/
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index'); 
+    
+    //guestbook.test/admin/dashboard -> route(admin.dashboard)
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+});
