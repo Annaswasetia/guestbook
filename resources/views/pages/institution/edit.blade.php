@@ -27,11 +27,10 @@
                         </div>
 
                         <div>
-                        <a href="{{route('admin.institution.index')}}" class="btn btn-secondary"> Kembali </a>
 
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
 
-                        <a href="{{ route('admin.institution.index') }}" class="btn btn-secondary">Batal</a>
+                        <a href="{{ route('admin.institution.index') }}" class="btn btn-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>

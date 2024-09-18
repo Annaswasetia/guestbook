@@ -26,5 +26,9 @@ Route::group([
     //guestbook.test/admin/dashboard -> route(admin.dashboard)
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
+    //guestbook.test/admin/institution(ROUTING CRUD)
     Route::resource('/institution', App\Http\Controllers\InstitutionController::class);
+
+    //guestbook.test/admin/guests(ROUTING CRUD)
+    Route::resource('/guests', App\Http\Controllers\GuestController::class)->only(['index', 'show', 'destroy']);
 });

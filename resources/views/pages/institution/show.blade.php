@@ -13,7 +13,6 @@
         <section class="section">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{route('admin.institution.index')}}" class="btn btn-sm btn-secondary mb-2"> Kembali </a>
                     <table class="table table-striped table-brodered">
                         <tr>
                             <th>ID</th>
@@ -32,6 +31,7 @@
                             <td>{{ Carbon\Carbon::parse ( $institutions->update_at)->isoFormat('DD MMMM Y HH:mm') }}</td>
                         </tr>
                     </table>
+                    <a href="{{route('admin.institution.index')}}" class="btn btn-sm btn-primary mb-2"> Back </a>
                 </div>
             </div>
         </section>
