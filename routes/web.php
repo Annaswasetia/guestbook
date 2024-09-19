@@ -31,4 +31,6 @@ Route::group([
 
     //guestbook.test/admin/guests(ROUTING CRUD)
     Route::resource('/guests', App\Http\Controllers\GuestController::class)->only(['index', 'show', 'destroy']);
+
+    Route::get('/reports', [App\Http\Controllers\ReportController::class, 'index'])->name('reports.index');
 });
