@@ -19,7 +19,7 @@ class FormGuestController extends Controller
         $request->validate([
             'fullname' => 'required|min:5|max:128',
             'institution_id' => 'required',
-            'form' => 'required|min:3|max:255',
+            'from' => 'required|min:3|max:255',
             'email' => 'required|email|max:64',
             'phonenumber' => 'required|min:10|max:16',
             'note' => 'required'

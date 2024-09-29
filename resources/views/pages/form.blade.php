@@ -64,11 +64,11 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group mb-3">
-                                        <label for="form">Dari</label>
-                                        <input type="text" name="form" id="form" value="{{ old('form')}}" 
-                                        class="form-control @error('form') is-invalid @enderror"/>
+                                        <label for="from">Dari</label>
+                                        <input type="text" name="from" id="from" value="{{ old('from')}}" 
+                                        class="form-control @error('from') is-invalid @enderror"/>
         
-                                        @error('form')
+                                        @error('from')
                                             <div class="invalid-feedback d-block">{{ $message }}</div>
                                         @enderror
                                     </div>
